@@ -1,0 +1,36 @@
+.scroll-service-background {
+  position: fixed;
+  z-index: 4;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.scroll-service-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 250, 247, .08);
+  pointer-events: none;
+}
+
+.scroll-service-image {
+  position: absolute;
+  inset: -12%;
+  width: 124%;
+  height: 124%;
+  object-fit: cover;
+  filter: blur(15px) saturate(.72) contrast(.9);
+  mix-blend-mode: multiply;
+  will-change: transform, opacity;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .scroll-service-image { filter: blur(18px) saturate(.65); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-service-background { display: none; }
+}

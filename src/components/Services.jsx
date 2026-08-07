@@ -37,7 +37,7 @@ export default function Services({ onSelectService }) {
       category: 'removal',
       title: 'Hazardous Tree Removal',
       tag: 'CRANE ASSISTED',
-      badgeColor: 'bg-red-500/10 text-red-700 border-red-200',
+      badgeColor: 'bg-emerald-500/10 text-emerald-800 border-emerald-200',
       description: 'Safe, controlled removal of dangerous, dying, or overgrown trees near homes, utility lines, and structures in Buffalo, NY.',
       features: ['Tight-space rigging & crane operation', 'Full debris haul-off', '$2M property protection insurance'],
       icon: Trees,
@@ -79,12 +79,12 @@ export default function Services({ onSelectService }) {
       category: 'emergency',
       title: '24/7 Emergency Storm Cleanup',
       tag: 'RAPID DISPATCH',
-      badgeColor: 'bg-red-600 text-white font-bold',
+      badgeColor: 'bg-forest-700 text-white border-forest-600 font-bold',
       description: 'Immediate response team for trees fallen on roofs, driveways, or powerlines following Western NY severe weather.',
       features: ['Direct insurance billing assistance', 'Rapid crew mobilization', 'Immediate hazard mitigation'],
       icon: ShieldAlert,
       isFeatured: false,
-      accent: 'from-red-600 to-rose-800',
+      accent: 'from-emerald-600 to-forest-900',
       image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=82',
       imageAlt: 'Storm-damaged fallen tree ready for cleanup',
     },
@@ -243,7 +243,7 @@ export default function Services({ onSelectService }) {
           <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row sm:px-10 sm:py-10">
           
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-300/25 text-xs font-bold uppercase tracking-wider mb-3">
               <Zap className="w-3.5 h-3.5" />
               <span>Immediate Hazard?</span>
             </div>
@@ -257,7 +257,7 @@ export default function Services({ onSelectService }) {
 
           <a
             href="tel:+17165078767"
-            className="relative z-10 flex-shrink-0 inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:scale-105 active:scale-95"
+            className="relative z-10 flex-shrink-0 inline-flex items-center gap-3 bg-forest-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:scale-105 active:scale-95"
           >
             <Zap className="w-4 h-4 fill-white" />
             <span>Call Emergency Hotline: +1 (716) 507-8767</span>

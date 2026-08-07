@@ -24,7 +24,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
   return (
     <header className="lucid-navbar-shell">
       <div className="lucid-navbar-wrap">
-        <nav className="glass-nav lucid-navbar rounded-2xl px-3 sm:px-5 flex items-center justify-between">
+        <nav className="glass-nav lucid-navbar rounded-full px-3 sm:px-5 flex items-center justify-between">
           <div className="lucid-navbar-glow" aria-hidden="true" />
           
           {/* Brand Logo */}
@@ -38,17 +38,17 @@ export default function Navbar({ activeTab, setActiveTab }) {
           </button>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-1 rounded-xl bg-white/[0.04] p-1">
+          <div className="hidden md:flex items-center gap-1 rounded-full bg-slate-100/60 p-1">
             {navLinks.map((link) => {
               const isActive = activeTab === link.id;
               return (
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-300 ${
+                  className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
                     isActive
-                      ? 'bg-white text-slate-950 shadow-md'
-                      : 'text-slate-400 hover:bg-white/[0.07] hover:text-white'
+                      ? 'bg-forest-800 text-white shadow-md'
+                      : 'text-slate-700 hover:bg-forest-800 hover:text-white hover:shadow-md'
                   }`}
                 >
                   {link.label}
@@ -61,16 +61,16 @@ export default function Navbar({ activeTab, setActiveTab }) {
           <div className="flex items-center gap-3">
             <a
               href="tel:+17165078767"
-              className="hidden sm:inline-flex items-center gap-2 border border-forest-400/30 bg-forest-500/10 hover:bg-forest-500 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+              className="hidden sm:inline-flex items-center gap-2 border border-forest-700 bg-forest-600 text-white px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 shadow-md hover:border-forest-800 hover:bg-forest-800 hover:text-white hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Phone className="w-3.5 h-3.5 text-forest-400 fill-forest-400/20" />
+              <Phone className="w-3.5 h-3.5 text-white" />
               <span>+1 (716) 507-8767</span>
             </a>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="md:hidden w-10 h-10 rounded-full bg-forest-800 flex items-center justify-center text-white hover:bg-forest-600 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

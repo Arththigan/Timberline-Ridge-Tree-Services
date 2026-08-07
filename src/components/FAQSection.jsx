@@ -32,7 +32,7 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="mx-auto mb-16 max-w-3xl rounded-3xl border border-white/80 bg-white/80 px-5 py-8 text-center shadow-[0_20px_55px_-30px_rgba(15,23,42,0.45)] backdrop-blur-md sm:px-10">
           <div className="pill-badge mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-forest-700" />
             <span>Got Questions?</span>
@@ -42,7 +42,7 @@ export default function FAQSection() {
             Frequently Asked <span className="text-gradient-metallic">Questions</span>
           </h2>
           
-          <p className="text-base text-slate-600">
+          <p className="text-base font-medium text-slate-700">
             Clear answers regarding pricing, insurance, safety, and dispatch times.
           </p>
         </div>

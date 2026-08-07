@@ -279,6 +279,7 @@
 .lucid-navbar {
   position: relative;
   min-height: 4.5rem;
+  border-radius: 999px;
 }
 
 .lucid-navbar-glow {
@@ -299,7 +300,7 @@
   overflow: hidden;
   flex-shrink: 0;
   border-radius: .75rem;
-  background: rgba(255, 255, 255, .94);
+  background: transparent;
 }
 
 .navbar-logo-crop img {
@@ -310,7 +311,6 @@
   left: 0;
   top: -1.95rem;
   object-fit: contain;
-  mix-blend-mode: multiply;
   transition: transform .35s ease;
 }
 
@@ -344,16 +344,17 @@
 
 /* Glassmorphic Utilities & Lucidly Webflow Styling */
 .glass-nav {
-  background: linear-gradient(105deg, rgba(3, 10, 7, .95), rgba(22, 31, 27, .92) 52%, rgba(4, 13, 9, .95));
-  backdrop-filter: blur(18px) saturate(120%);
-  -webkit-backdrop-filter: blur(18px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, .12);
-  box-shadow: 0 24px 55px -18px rgba(0, 0, 0, .55), inset 0 1px 0 rgba(255, 255, 255, .08);
+  background: linear-gradient(105deg, rgba(255, 255, 255, .9), rgba(247, 255, 250, .78) 52%, rgba(255, 255, 255, .9));
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  border: 1px solid rgba(255, 255, 255, .82);
+  box-shadow: 0 22px 48px -18px rgba(15, 23, 42, .28), inset 0 1px 0 rgba(255, 255, 255, .95);
   transition: border-color .6s cubic-bezier(.645, .045, .355, 1), box-shadow .6s ease;
 }
 
 .glass-nav:hover {
-  border-color: rgba(74, 222, 128, .28);
+  border-color: rgba(22, 163, 74, .32);
+  box-shadow: 0 24px 54px -18px rgba(15, 23, 42, .34), inset 0 1px 0 #fff;
 }
 
 @media (max-width: 767px) {

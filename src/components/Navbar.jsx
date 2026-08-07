@@ -30,7 +30,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
           {/* Brand Logo */}
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2.5 group text-left focus:outline-none"
+            className="min-w-0 flex items-center gap-2.5 group text-left focus:outline-none"
           >
             <div className="navbar-logo-crop" aria-label="Timber Line Ridge Tree Services">
               <img src={logoUrl} alt="Timber Line Ridge Tree Services" />
@@ -58,7 +58,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
           </div>
 
           {/* Right Call Action & Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-3">
             <a
               href="tel:+17165078767"
               className="hidden sm:inline-flex items-center gap-2 border border-forest-700 bg-forest-600 text-white px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 shadow-md hover:border-forest-800 hover:bg-forest-800 hover:text-white hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"

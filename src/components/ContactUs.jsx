@@ -14,14 +14,14 @@ export default function ContactUs() {
   }, []);
 
   return (
-    <section id="contact" className="static-tree-bg static-tree-bg--trunks py-24 bg-slate-50 relative overflow-hidden">
+    <section id="contact" className="static-tree-bg static-tree-bg--trunks py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-forest-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="pill-badge mb-4">
             <Mail className="w-3.5 h-3.5 text-forest-700" />
             <span>Connect With Us</span>
@@ -42,7 +42,7 @@ export default function ContactUs() {
           <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-slate-950/20 lg:col-span-7">
             <iframe
               src="https://link.kdlead.com/widget/form/VKrLvh7rNiLUrECZPaxm"
-              className="block h-[620px] w-full rounded-[2rem] border-0"
+              className="block h-[680px] w-full rounded-[2rem] border-0 sm:h-[620px]"
               id="inline-VKrLvh7rNiLUrECZPaxm"
               data-layout="{'id':'INLINE'}"
               data-trigger-type="alwaysShow"

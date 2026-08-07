@@ -129,7 +129,7 @@ export default function Footer({ setActiveTab, onLegalNavigate }) {
             <button onClick={() => onLegalNavigate('privacy')} className="hover:text-forest-400 transition-colors">Privacy Policy</button>
             <button onClick={() => onLegalNavigate('terms')} className="hover:text-forest-400 transition-colors">Terms & Conditions</button>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-6">
             <span>77 Sheffield Ave, Buffalo, NY 14220</span>
             <span>+1 (716) 507-8767</span>
           </div>

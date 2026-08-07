@@ -28,11 +28,11 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="static-tree-bg static-tree-bg--forest py-24 bg-white relative overflow-hidden">
+    <section className="static-tree-bg static-tree-bg--forest py-16 sm:py-24 bg-white relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="mx-auto mb-16 max-w-3xl rounded-3xl border border-white/80 bg-white/80 px-5 py-8 text-center shadow-[0_20px_55px_-30px_rgba(15,23,42,0.45)] backdrop-blur-md sm:px-10">
+        <div className="mx-auto mb-10 max-w-3xl rounded-3xl border border-white/80 bg-white/80 px-5 py-8 text-center shadow-[0_20px_55px_-30px_rgba(15,23,42,0.45)] backdrop-blur-md sm:mb-16 sm:px-10">
           <div className="pill-badge mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-forest-700" />
             <span>Got Questions?</span>
@@ -60,7 +60,7 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
                   <span className="font-display font-bold text-base sm:text-lg text-slate-950">
                     {faq.question}
@@ -73,7 +73,7 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 animate-in fade-in duration-200">
+                  <div className="px-5 pb-5 pt-3 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 animate-in fade-in duration-200">
                     {faq.answer}
                   </div>
                 )}
@@ -90,7 +90,7 @@ export default function FAQSection() {
           </div>
           <a
             href="tel:+17165078767"
-            className="bg-slate-950 hover:bg-forest-700 text-white px-6 py-3 rounded-full text-xs font-bold transition-colors flex items-center gap-2 whitespace-nowrap"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-forest-800 px-6 py-3 text-xs font-bold text-white transition-colors hover:bg-forest-700 sm:w-auto sm:whitespace-nowrap"
           >
             <Phone className="w-3.5 h-3.5 text-forest-400" />
             <span>Speak to Arborist</span>

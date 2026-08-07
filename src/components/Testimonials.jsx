@@ -40,11 +40,11 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="static-tree-bg static-tree-bg--canopy py-24 bg-slate-50 relative overflow-hidden">
+    <section className="static-tree-bg static-tree-bg--canopy py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="pill-badge mb-4">
             <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             <span>Verified Customer Feedback</span>
@@ -81,7 +81,7 @@ export default function Testimonials() {
           </div>
 
           {/* Active Review Card */}
-          <div className="glass-card rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/90 relative">
+          <div className="glass-card rounded-3xl p-5 sm:p-12 shadow-xl border border-slate-200/90 relative">
             <Quote className="w-12 h-12 text-forest-200 absolute top-8 right-8 pointer-events-none" />
 
             <div className="flex items-center gap-1 mb-6">
@@ -106,7 +106,7 @@ export default function Testimonials() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 bg-forest-50 border border-forest-200 text-forest-800 px-3 py-1.5 rounded-full text-xs font-bold">
+              <div className="flex max-w-full items-center gap-2 rounded-2xl border border-forest-200 bg-forest-50 px-3 py-1.5 text-xs font-bold text-forest-800 sm:rounded-full">
                 <CheckCircle className="w-3.5 h-3.5 text-forest-600" />
                 <span>Service: {reviews[activeTab].service}</span>
               </div>

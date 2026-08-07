@@ -76,7 +76,7 @@ export default function ScrollExpand({
       const viewportHeight = window.innerHeight;
       stage.style.height = `${viewportHeight}px`;
       track.style.height = `${viewportHeight * (1 + scrollDistance + holdDistance)}px`;
-      stage.style.setProperty('--se-title-size', `${clamp(window.innerWidth * 0.066, 34, 82)}px`);
+      stage.style.setProperty('--se-title-size', `${clamp(window.innerWidth * 0.066, 27, 82)}px`);
     };
     const read = () => clamp(-track.getBoundingClientRect().top / (window.innerHeight * scrollDistance), 0, 1);
     const tick = () => {

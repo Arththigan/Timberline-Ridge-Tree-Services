@@ -109,11 +109,11 @@ export default function Services({ onSelectService }) {
     : servicesData.filter(s => s.category === activeFilter);
 
   return (
-    <section id="services" className="static-tree-bg static-tree-bg--canopy services-atmosphere py-24 relative">
+    <section id="services" className="static-tree-bg static-tree-bg--canopy services-atmosphere py-16 sm:py-24 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="pill-badge mb-4">
             <Trees className="w-3.5 h-3.5 text-forest-700" />
             <span>Comprehensive Arborist Solutions</span>
@@ -240,9 +240,9 @@ export default function Services({ onSelectService }) {
         {/* Emergency Call Box */}
         <div className="services-emergency-cta mt-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-forest-200/40 rounded-full blur-3xl pointer-events-none" />
-          <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row sm:px-10 sm:py-10">
+          <div className="services-emergency-cta__inner relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-8 sm:px-10 sm:py-10">
           
-          <div className="relative z-10">
+          <div className="services-emergency-cta__copy relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-400/15 text-emerald-300 border border-emerald-300/25 text-xs font-bold uppercase tracking-wider mb-3">
               <Zap className="w-3.5 h-3.5" />
               <span>Immediate Hazard?</span>
@@ -257,10 +257,10 @@ export default function Services({ onSelectService }) {
 
           <a
             href="tel:+17165078767"
-            className="relative z-10 flex-shrink-0 inline-flex items-center gap-3 bg-forest-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-sm transition-all shadow-lg hover:scale-105 active:scale-95"
+            className="services-emergency-cta__button relative z-10 inline-flex items-center justify-center gap-3 rounded-full bg-forest-600 px-5 py-4 text-center text-sm font-bold text-white shadow-lg transition-all hover:bg-emerald-500 hover:scale-105 active:scale-95 sm:px-8"
           >
             <Zap className="w-4 h-4 fill-white" />
-            <span>Call Emergency Hotline: +1 (716) 507-8767</span>
+            <span>Call Now: +1 (716) 507-8767</span>
           </a>
           </div>
         </div>

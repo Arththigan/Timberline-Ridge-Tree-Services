@@ -166,6 +166,68 @@
   backdrop-filter: blur(8px) saturate(108%);
 }
 
+.services-emergency-cta__copy {
+  width: 100%;
+  min-width: 0;
+}
+
+.services-emergency-cta__inner {
+  width: min(100%, 72rem);
+  box-sizing: border-box;
+  align-items: flex-start !important;
+}
+
+.services-emergency-cta__button {
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: 100%;
+  background: #16a34a !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (min-width: 640px) {
+  .services-emergency-cta__button {
+    width: fit-content !important;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-emergency-cta__inner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .services-emergency-cta__copy {
+    width: 100%;
+    max-width: 42rem;
+  }
+
+  .services-emergency-cta__button {
+    width: fit-content !important;
+    max-width: 22rem;
+    white-space: nowrap;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 639px) {
+  .services-emergency-cta__button {
+    padding: .8rem 1rem !important;
+    font-size: .75rem !important;
+    line-height: 1.2;
+  }
+}
+
+.services-emergency-cta__button:hover {
+  background: #15803d !important;
+}
+
 @media (max-width: 767px) {
   .static-tree-bg:not(#services):not(.static-tree-bg--dark) > .max-w-6xl {
     border-radius: 0;
@@ -268,6 +330,7 @@
   width: 100%;
   margin-top: 1.5rem;
   padding: 0 5%;
+  box-sizing: border-box;
 }
 
 .lucid-navbar-wrap {
@@ -280,6 +343,8 @@
   position: relative;
   min-height: 4.5rem;
   border-radius: 999px;
+  width: 100%;
+  min-width: 0;
 }
 
 .lucid-navbar-glow {
@@ -360,11 +425,13 @@
 @media (max-width: 767px) {
   .lucid-navbar-shell {
     margin-top: 1.25rem;
-    padding: 0 1rem;
+    width: 100vw;
+    padding: 0 .75rem;
   }
 
   .lucid-navbar {
     min-height: 4rem;
+    max-width: calc(100vw - 1.5rem);
   }
 
   .site-ambient-background {
@@ -478,6 +545,7 @@
 /* Lucidly-inspired stacked service cards. Each card pins while the next card
    slides over it, creating the same loose paper-deck feeling. */
 .services-atmosphere {
+  overflow-x: clip;
   background:
     radial-gradient(ellipse 55% 30% at 12% 7%, rgba(187, 247, 208, .38), transparent 72%),
     radial-gradient(ellipse 50% 28% at 88% 12%, rgba(191, 219, 254, .34), transparent 72%),
@@ -709,6 +777,14 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
+}
+
+@media (max-width: 479px) {
+  .service-stack-card { padding: 1.15rem; }
+  .service-stack-card .service-card-actions > div:first-child { margin-bottom: 1rem; }
+  .service-card-content h3 { font-size: 1.15rem; }
+  .service-card-content p { margin-bottom: 1rem; }
+  .service-card-content ul { margin-bottom: 1.25rem; }
 }
 
 

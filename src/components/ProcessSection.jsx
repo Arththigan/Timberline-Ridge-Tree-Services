@@ -40,10 +40,10 @@ export default function ProcessSection({ onSchedule }) {
   ];
 
   return (
-    <section className="static-tree-bg static-tree-bg--forest py-24 bg-white relative overflow-hidden">
+    <section className="static-tree-bg static-tree-bg--forest py-16 sm:py-24 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="pill-badge mb-4">
             <span>Seamless Service Experience</span>
           </div>
@@ -108,7 +108,7 @@ export default function ProcessSection({ onSchedule }) {
         <div className="mt-16 text-center">
           <button
             onClick={onSchedule}
-            className="inline-flex items-center gap-3 bg-slate-950 hover:bg-forest-700 text-white px-8 py-4 rounded-full font-semibold text-sm transition-all shadow-xl hover:shadow-2xl"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-forest-800 px-5 py-4 text-center text-sm font-semibold text-white shadow-xl transition-all hover:bg-forest-700 hover:shadow-2xl sm:w-auto sm:px-8"
           >
             <span>Start Your 4-Step Tree Care Plan</span>
             <ArrowRight className="w-4 h-4 text-forest-400" />

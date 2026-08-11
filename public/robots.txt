@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timber-lineridge-tree-services.web.app/sitemap.xml

@@ -7,6 +7,9 @@ export default function Prism({ timeScale = .2, glow = .55, noise = .035, scale 
   useEffect(() => {
     const root = rootRef.current;
     if (!root) return undefined;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const constrainedDevice = window.matchMedia('(max-width: 768px)').matches;
+    if (reducedMotion || constrainedDevice) return undefined;
     const renderer = new Renderer({ dpr: Math.min(1.5, devicePixelRatio || 1), alpha: true, antialias: false });
     const gl = renderer.gl;
     gl.disable(gl.DEPTH_TEST);

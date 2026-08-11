@@ -1,8 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function ContactUs() {
+  const sectionRef = useRef(null);
+  const [loadForm, setLoadForm] = useState(false);
+
   useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setLoadForm(true); },
+      { rootMargin: '500px 0px' },
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!loadForm) return;
     const scriptId = 'kdlead-form-embed-script';
     if (document.getElementById(scriptId)) return;
 
@@ -11,10 +26,10 @@ export default function ContactUs() {
     script.src = 'https://link.kdlead.com/js/form_embed.js';
     script.async = true;
     document.body.appendChild(script);
-  }, []);
+  }, [loadForm]);
 
   return (
-    <section id="contact" className="static-tree-bg static-tree-bg--trunks py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
+    <section ref={sectionRef} id="contact" className="static-tree-bg static-tree-bg--trunks py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-forest-200/30 rounded-full blur-3xl -z-10 pointer-events-none" />
 
@@ -40,8 +55,9 @@ export default function ContactUs() {
           
           {/* KDLead embedded estimate form */}
           <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-slate-950/20 lg:col-span-7">
-            <iframe
+            {loadForm ? <iframe
               src="https://link.kdlead.com/widget/form/VKrLvh7rNiLUrECZPaxm"
+              loading="lazy"
               className="block h-[680px] w-full rounded-[2rem] border-0 sm:h-[620px]"
               id="inline-VKrLvh7rNiLUrECZPaxm"
               data-layout="{'id':'INLINE'}"
@@ -56,7 +72,7 @@ export default function ContactUs() {
               data-layout-iframe-id="inline-VKrLvh7rNiLUrECZPaxm"
               data-form-id="VKrLvh7rNiLUrECZPaxm"
               title="Free On-Site Estimate Form"
-            />
+            /> : <div className="flex h-[680px] items-center justify-center bg-slate-50 text-sm font-semibold text-slate-500 sm:h-[620px]">Estimate form loads as you approach this section.</div>}
           </div>
 
           <div className="space-y-5 lg:col-span-5">

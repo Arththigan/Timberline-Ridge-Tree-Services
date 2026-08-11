@@ -10,6 +10,7 @@ const smoothstep = (from, to, value) => {
 
 export default function ScrollExpand({
   src,
+  srcSet,
   alt = '',
   title = '',
   scrollHint = '',
@@ -114,7 +115,17 @@ export default function ScrollExpand({
           <Prism timeScale={0.2} scale={3.4} glow={0.52} noise={0.035} hueShift={1.9} suspendWhenOffscreen />
         </div>
         <div ref={frameRef} className="scroll-expand__frame">
-          <img ref={mediaRef} className="scroll-expand__media" src={src} alt={alt} draggable="false" />
+          <img
+            ref={mediaRef}
+            className="scroll-expand__media"
+            src={src}
+            srcSet={srcSet}
+            sizes="100vw"
+            alt={alt}
+            fetchPriority="high"
+            decoding="async"
+            draggable="false"
+          />
           <div ref={scrimRef} className="scroll-expand__scrim" />
           <div ref={overlayRef} className="scroll-expand__overlay">{children}</div>
         </div>

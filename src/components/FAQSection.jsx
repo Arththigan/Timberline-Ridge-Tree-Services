@@ -85,7 +85,7 @@ export default function FAQSection() {
         {/* Need more info CTA */}
         <div className="mt-12 text-center bg-slate-100/80 rounded-2xl p-6 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
-            <h4 className="font-bold text-slate-950 text-sm">Have a specific question about your tree?</h4>
+            <h3 className="font-bold text-slate-950 text-sm">Have a specific question about your tree?</h3>
             <p className="text-xs text-slate-600">Call our Buffalo arborists directly at +1 (716) 507-8767.</p>
           </div>
           <a

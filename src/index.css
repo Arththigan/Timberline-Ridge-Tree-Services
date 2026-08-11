@@ -40,6 +40,13 @@
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  .site-fixed-worker-background {
+    background-image: none;
+    background: linear-gradient(160deg, #e8f5ec 0%, #f8fafc 52%, #dceeff 100%);
+  }
+}
+
 .site-ambient-background {
   position: absolute;
   z-index: -2;

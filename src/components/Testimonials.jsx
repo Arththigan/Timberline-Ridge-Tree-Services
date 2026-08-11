@@ -101,7 +101,7 @@ export default function Testimonials() {
                   {reviews[activeTab].name.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-950 text-sm">{reviews[activeTab].name}</h4>
+                  <h3 className="font-bold text-slate-950 text-sm">{reviews[activeTab].name}</h3>
                   <p className="text-xs text-slate-500">{reviews[activeTab].location}</p>
                 </div>
               </div>

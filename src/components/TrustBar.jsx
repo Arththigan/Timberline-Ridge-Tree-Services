@@ -38,7 +38,7 @@ export default function TrustBar() {
                   <IconComponent className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-950 tracking-tight leading-tight">{item.title}</h4>
+                  <h3 className="text-sm font-bold text-slate-950 tracking-tight leading-tight">{item.title}</h3>
                   <p className="text-xs text-slate-500 mt-0.5">{item.subtitle}</p>
                 </div>
               </div>

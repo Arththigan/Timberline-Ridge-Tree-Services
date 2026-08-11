@@ -2,13 +2,17 @@ import React from 'react';
 import { ArrowRight, Phone, ShieldCheck, Trees } from 'lucide-react';
 import ScrollExpand from './ScrollExpand';
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=2400&q=88';
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=960&q=72';
+const HERO_IMAGE_SRCSET = [640, 960, 1400]
+  .map(width => `https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=${width}&q=72 ${width}w`)
+  .join(', ');
 
 export default function Hero({ onNavigate }) {
   return (
     <section id="home" className="relative bg-[#eaf4ef]">
       <ScrollExpand
         src={HERO_IMAGE}
+        srcSet={HERO_IMAGE_SRCSET}
         alt="Looking upward into a healthy green tree canopy"
         title={<h1 className="hero-gradient-heading">Precision Tree Care, Built Around<br />Safety.</h1>}
         scrollHint="Scroll to explore"

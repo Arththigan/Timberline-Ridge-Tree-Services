@@ -57,7 +57,7 @@ export default function AboutUs({ onNavigate }) {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-950">Headquarters & Dispatch Hub</h4>
+                  <h3 className="text-xs font-bold text-slate-950">Headquarters & Dispatch Hub</h3>
                   <p className="text-xs text-slate-600">77 Sheffield Ave, Buffalo, NY 14220</p>
                 </div>
               </div>

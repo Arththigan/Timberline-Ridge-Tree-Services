@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Menu, X, ArrowUpRight, ShieldCheck, MapPin } from 'lucide-react';
-import logoUrl from '../../timber_line_ridge_tree_services_logo-Photoroom.png';
+import logoUrl from '../../timber_line_ridge_tree_services_logo-256.webp';
 
 export default function Navbar({ activeTab, setActiveTab }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
             className="min-w-0 flex items-center gap-2.5 group text-left focus:outline-none"
           >
             <div className="navbar-logo-crop" aria-label="Timber Line Ridge Tree Services">
-              <img src={logoUrl} alt="Timber Line Ridge Tree Services" width="1024" height="1024" decoding="async" />
+              <img src={logoUrl} alt="Timber Line Ridge Tree Services" width="256" height="256" decoding="async" />
             </div>
           </button>
 

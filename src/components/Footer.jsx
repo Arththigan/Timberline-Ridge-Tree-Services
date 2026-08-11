@@ -25,7 +25,7 @@ export default function Footer({ setActiveTab, onLegalNavigate }) {
           {/* Brand Info (2 columns on large) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="footer-logo-crop">
-              <img src={logoUrl} alt="Timber Line Ridge Tree Services" />
+              <img src={logoUrl} alt="Timber Line Ridge Tree Services" width="1024" height="1024" loading="lazy" decoding="async" />
             </div>
 
             <p className="text-sm text-white leading-relaxed max-w-sm">

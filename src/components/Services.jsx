@@ -43,7 +43,7 @@ export default function Services({ onSelectService }) {
       icon: Trees,
       isFeatured: true,
       accent: 'from-emerald-500 to-forest-700',
-      image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=700&q=70',
+      image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=600&q=55',
       imageAlt: 'Professional arborist removing a hazardous tree with a chainsaw',
     },
     {
@@ -57,7 +57,7 @@ export default function Services({ onSelectService }) {
       icon: Scissors,
       isFeatured: false,
       accent: 'from-teal-500 to-emerald-700',
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&fm=webp&w=700&q=70',
+      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&fm=webp&w=600&q=55',
       imageAlt: 'Tree arborist pruning a branch high in a tree',
     },
     {
@@ -71,7 +71,7 @@ export default function Services({ onSelectService }) {
       icon: Shovel,
       isFeatured: false,
       accent: 'from-amber-500 to-orange-700',
-      image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&fm=webp&w=700&q=70',
+      image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&fm=webp&w=600&q=55',
       imageAlt: 'Professional tree-service crew operating heavy machinery',
     },
     {
@@ -85,7 +85,7 @@ export default function Services({ onSelectService }) {
       icon: ShieldAlert,
       isFeatured: false,
       accent: 'from-emerald-600 to-forest-900',
-      image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&fm=webp&w=700&q=70',
+      image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&fm=webp&w=600&q=55',
       imageAlt: 'Storm-damaged fallen tree ready for cleanup',
     },
     {
@@ -99,7 +99,7 @@ export default function Services({ onSelectService }) {
       icon: Sparkles,
       isFeatured: false,
       accent: 'from-blue-500 to-indigo-700',
-      image: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&fm=webp&w=700&q=70',
+      image: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&fm=webp&w=600&q=55',
       imageAlt: 'Certified arborist working safely in a mature tree',
     },
   ];
@@ -162,7 +162,7 @@ export default function Services({ onSelectService }) {
           <div className="service-bg-orb service-bg-orb--one" aria-hidden="true" />
           <div className="service-bg-orb service-bg-orb--two" aria-hidden="true" />
           <div className="service-card-deck">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="sync">
           {filteredServices.map((service, cardIndex) => {
             const IconComp = service.icon;
             return (

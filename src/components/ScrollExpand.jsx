@@ -109,8 +109,12 @@ export default function ScrollExpand({
   }, [applyProgress, holdDistance, scrollDistance, smoothing]);
 
   return (
-    <div ref={trackRef} className="scroll-expand__track">
-      <div ref={stageRef} className="scroll-expand__stage">
+    <div
+      ref={trackRef}
+      className="scroll-expand__track"
+      style={{ height: `${(1 + scrollDistance + holdDistance) * 100}vh` }}
+    >
+      <div ref={stageRef} className="scroll-expand__stage" style={{ height: '100vh' }}>
         <div className="scroll-expand__prism" aria-hidden="true">
           <Prism timeScale={0.2} scale={3.4} glow={0.52} noise={0.035} hueShift={1.9} suspendWhenOffscreen />
         </div>
@@ -122,7 +126,7 @@ export default function ScrollExpand({
             srcSet={srcSet}
             sizes="100vw"
             alt={alt}
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
             draggable="false"
           />

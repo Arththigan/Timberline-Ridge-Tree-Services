@@ -2,9 +2,9 @@ import React from 'react';
 import { ArrowRight, Phone, ShieldCheck, Trees } from 'lucide-react';
 import ScrollExpand from './ScrollExpand';
 
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=960&q=72';
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=800&q=55';
 const HERO_IMAGE_SRCSET = [640, 960, 1400]
-  .map(width => `https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=${width}&q=72 ${width}w`)
+  .map(width => `https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&fm=webp&w=${width}&q=55 ${width}w`)
   .join(', ');
 
 export default function Hero({ onNavigate }) {

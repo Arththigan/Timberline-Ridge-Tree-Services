@@ -33,7 +33,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
             className="min-w-0 flex items-center gap-2.5 group text-left focus:outline-none"
           >
             <div className="navbar-logo-crop" aria-label="Timber Line Ridge Tree Services">
-              <img src={logoUrl} alt="Timber Line Ridge Tree Services" />
+              <img src={logoUrl} alt="Timber Line Ridge Tree Services" width="1024" height="1024" decoding="async" />
             </div>
           </button>
 
